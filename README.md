@@ -93,3 +93,20 @@
 <p><b>sleep()</b> no libera los recursos que el hilo pueda estar utilizando, y también puede lanzar una excepción InterruptedException si el hilo es interrumpido mientras está dormido.</p>
 
 <p>En resumen, <b>join()</b> se utiliza para esperar a que otro hilo termine, mientras que <b>sleep()</b> se utiliza para hacer que un hilo espere durante un período de tiempo específico antes de continuar su ejecución. Ambos son útiles en situaciones diferentes, dependiendo de los requisitos específicos de la aplicación.</p>
+
+<h2 align="center">Synchronized</h2>
+<p>El modificador <b>'synchronized</b> en Java se utiliza para crear secciones críticas en código, lo que significa que solo un hilo puede ejecutar ese bloque de código a la vez. Esto ayuda a evitar problemas de concurrencia y a garantizar que ciertas secciones del código no sean ejecutadas simultáneamente por múltiples hilos, lo que podría llevar a condiciones de carrera y resultados inesperados</p>
+<p>Se puede usar <b>'synchronized</b> de dos maneras: en métodos o en bloques de código.</p>
+<h3>1. Método Sincronizado:</h3>
+<p>Cuando un método está marcado como <b>'synchronized</b>, se obtiene un bloqueo en el objeto en el que se está llamando el método. Esto significa que otros hilos que intenten ejecutar cualquier método sincronizado en el mismo objeto tendrán que esperar a que el bloqueo se libere.</p>
+<h3>2. Bloque de Código Sincronizado:</h3>
+<p>En este caso, el bloque de código sincronizado está limitado al objeto específico (miObjeto) que se proporciona como argumento al bloque <b>'synchronized'</b>. Otros hilos que intenten ejecutar un bloque sincronizado en el mismo objeto tendrán que esperar.</p>
+<h3>Uso adecuado de <b>'synchronized'</b>:</h3>
+
+- <b>Evitar excesivo bloqueo:</b> El uso excesivo de synchronized puede conducir a la degradación del rendimiento. Es importante sincronizar solo las secciones críticas necesarias para evitar bloquear innecesariamente otros hilos.
+
+- <b>Usar objetos compartidos como bloqueo:</b> Si varios hilos trabajan con el mismo recurso compartido, es común usar ese objeto compartido como el objeto de bloqueo.
+
+- <b>Usar métodos atómicos:</b> Cuando sea posible, utiliza métodos atómicos proporcionados por las clases del paquete java.util.concurrent en lugar de synchronized para realizar operaciones seguras sin necesidad de bloquear todo el método o bloque de código.
+
+<p>El uso adecuado de <b>synchronized'</b> es esencial para garantizar la consistencia y evitar problemas de concurrencia en aplicaciones multihilo.</p>
