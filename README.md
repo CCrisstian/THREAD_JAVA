@@ -81,10 +81,10 @@
 <p>La interfaz <b>'Runnable'</b> en Java es una interfaz funcional que proporciona una forma de definir tareas que pueden ser ejecutadas por un hilo. Esta interfaz se utiliza comúnmente al trabajar con hilos en lugar de extender la clase <b>'Thread'</b>. La ventaja de usar <b>'Runnable'</b> es que puedes separar la lógica de la tarea de la lógica de ejecución del hilo, lo que facilita la reutilización del código.</p>
 <p>La interfaz <b>'Runnable'</b> tiene un solo método llamado <b>'run()'</b>, que debe ser implementado por cualquier clase que la implemente. Este método contiene el código que se ejecutará en el hilo cuando se inicie.</p>
 
-<h2 aling="center">'Join' vs 'Sleep'</h2>
+<h2 align="center">'Join' vs 'Sleep'</h2>
 <h3>Join</h3>
 <p>Propósito: El método <b>join()</b> se utiliza para esperar a que un hilo termine su ejecución antes de que el hilo actual continúe su ejecución.<p>
-<p>Uso:</p> Se puede llamar al método <b>join()</b> en un objeto <b>Thread</b> desde otro hilo para esperar hasta que ese hilo termine.
+<p>Uso: Se puede llamar al método <b>join()</b> en un objeto <b>Thread</b> desde otro hilo para esperar hasta que ese hilo termine.</p>
 <p> El método <b>join()</b> también tiene una versión que permite especificar un tiempo máximo de espera, después del cual el hilo actual continúa su ejecución incluso si el hilo al que se está uniendo aún no ha terminado.</p>
 
 <h3>Sleep(long millis)</h3>
