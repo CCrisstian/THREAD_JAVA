@@ -110,3 +110,20 @@
 - <b>Usar métodos atómicos:</b> Cuando sea posible, utiliza métodos atómicos proporcionados por las clases del paquete java.util.concurrent en lugar de synchronized para realizar operaciones seguras sin necesidad de bloquear todo el método o bloque de código.
 
 <p>El uso adecuado de <b>synchronized'</b> es esencial para garantizar la consistencia y evitar problemas de concurrencia en aplicaciones multihilo.</p>
+
+<h2 aling="center">Wait(), Notify() y NotifyAll()</h2>
+<p>El método <b>'wait()'</b> es un método de la clase Object en Java, no de la clase Thread. Sin embargo, es comúnmente utilizado en el contexto de la programación concurrente y la gestión de hilos. <b>'wait()'</b> se utiliza junto con el método <b>'notify()</b> y <b>'notifyAll()'</b> para lograr la sincronización y la comunicación entre hilos.</p>
+<h3>Uso Básico:</h3>
+<p>El método <b>'wait()'</b> se utiliza dentro de un bloque sincronizado para liberar el bloqueo del objeto y hacer que el hilo espere hasta que otro hilo llame a <b>'notify()</b> o <b>'notifyAll()'</b> en el mismo objeto. Cuando un hilo llama a <b>'wait()'</b>, se suspende su ejecución y libera el bloqueo asociado al objeto. El hilo permanece en estado de espera hasta que otro hilo llama a <b>'notify()'</b> o <b>'notifyAll()'</b> en el mismo objeto, lo que despierta al hilo en espera.</p>
+<h3>Uso con 'notify()' y 'notifyAll()':</h3>
+
+- notify(): Despierta a uno de los hilos que están en espera (elegido de manera no determinista).
+- notifyAll(): Despierta a todos los hilos que están en espera. A menudo es preferible usar notifyAll() para evitar situaciones en las que algunos hilos podrían quedarse en espera indefinidamente.
+
+<h3>Consideraciones Importantes:</h3>
+
+- Dentro de un bloque sincronizado: wait() debe ser llamado dentro de un bloque sincronizado para evitar condiciones de carrera.
+- En un bucle mientras: Es común utilizar wait() dentro de un bucle while que verifica una condición para evitar "despertares espurios" (despertares sin una notificación real).
+- Excepción InterruptedException: wait() puede lanzar InterruptedException, por lo que es necesario manejar esta excepción.
+
+<p>La combinación de <b>'wait()'</b>, <b>'notify()'</b>, y <b>'notifyAll()'</b> es fundamental para la implementación de patrones de comunicación entre hilos en Java. Estos métodos proporcionan una forma segura de sincronizar y coordinar la ejecución de hilos en situaciones donde se comparten recursos.</p>
