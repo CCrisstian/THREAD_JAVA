@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c48b3ec-22e2-4401-9b30-e9b6b5fcd399" name="Changes" comment="" />
+    <list default="true" id="3c48b3ec-22e2-4401-9b30-e9b6b5fcd399" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_InterfaceRunnable_Funcional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_SINCRONIZACION_Thread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Runnable/ImprimirFrases.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Panaderia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_EXTEDER_Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_EXTEDER_Thread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_InterfaceRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_InterfaceRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Runnable/ViajeTarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Runnable/ViajeTarea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Threads/Nombre_Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Threads/Nombre_Thread.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2bdCGBCAEh8iEqu9tdeQTtrXIeR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -21,12 +41,30 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Ejemplo_EXTEDER_Thread.executor": "Run",
+    "Application.Ejemplo_InterfaceRunnable.executor": "Run",
+    "Application.Ejemplo_InterfaceRunnable_Funcional.executor": "Run",
+    "Application.Ejemplo_SINCRONIZACION_Thread.executor": "Run",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.CCristian.HILOS.Ejemplos" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
