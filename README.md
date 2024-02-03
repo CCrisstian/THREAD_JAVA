@@ -128,3 +128,26 @@
 - Excepción InterruptedException: wait() puede lanzar InterruptedException, por lo que es necesario manejar esta excepción.
 
 <p>La combinación de <b>'wait()'</b>, <b>'notify()'</b>, y <b>'notifyAll()'</b> es fundamental para la implementación de patrones de comunicación entre hilos en Java. Estos métodos proporcionan una forma segura de sincronizar y coordinar la ejecución de hilos en situaciones donde se comparten recursos.</p>
+
+<h2 align="center"> "Timer" y "TimerTask"</h2>
+
+<p>En JAVA, las clases <b>'Timer'</b> y <b>'TimerTask'</b> se utilizan para programar tareas para ejecutarse en el futuro de manera programada o periódica. Estas clases forman parte del paquete <b>'java.util'</b>.</p>
+
+<h3>Timer</h3>
+<p>La clase <b>'Timer'</b> se utiliza para programar tareas para ejecutarse en el futuro, ya sea de forma única o periódica. Permite la programación de tareas en un hilo de fondo.</p>
+
+<h3>TimerTask</h3>
+<p>La clase abstracta TimerTask implementa la interfaz <b>'Runnable'</b> y se utiliza para representar una tarea programada que puede ser ejecutada por un <b>'Timer'</b></p>
+<h3>Observaciones Importantes:</h3>
+
+-  1 Programación Única o Periódica:
+<p>Puedes usar <b>'schedule()'</b> para programar una tarea única o <b>'scheduleAtFixedRate()'</b> para programar una tarea periódica.</p>
+
+-  2 Tiempos Relativos o Absolutos:
+<p>Puedes especificar tiempos relativos (por ejemplo, 2000 milisegundos después de ahora) o tiempos absolutos (un instante de tiempo específico) para la ejecución de la tarea.</p>
+
+-  3 Gestión de Excepciones:
+<p>Es importante manejar las excepciones, ya que las tareas programadas pueden lanzar excepciones que deben ser capturadas y manejadas adecuadamente.</p>
+
+-  4 Consideraciones de Concurrencia:
+<p>Ambas clases <b>('Timer' y 'TimerTask')</b> no están diseñadas para ser utilizadas en entornos concurrentes avanzados, como en aplicaciones con hilos concurrentes. En tales casos, se recomienda utilizar alternativas más modernas como <b>'ScheduledExecutorService'</b> del paquete <b>'java.util.concurrent'</b>.
