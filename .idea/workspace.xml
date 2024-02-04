@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c48b3ec-22e2-4401-9b30-e9b6b5fcd399" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_InterfaceRunnable_Funcional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_SINCRONIZACION_Thread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Runnable/ImprimirFrases.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Panaderia.java" afterDir="false" />
+    <list default="true" id="3c48b3ec-22e2-4401-9b30-e9b6b5fcd399" name="Changes" comment="Ejemplo_SINCRONIZACION_Thread se creó la 1ra clase">
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_TIMER/Ejemplo_AgendarTareaTimer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_TIMER/Ejemplo_AgendarTareaTimerPERIODO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Ejemplo_ProductorConsumidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Ejemplo_ProductorConsumidor_JAVA8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Runnable/Consumidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Runnable/Panadero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_EXTEDER_Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_EXTEDER_Thread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_InterfaceRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Ejemplo_InterfaceRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Runnable/ViajeTarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Runnable/ViajeTarea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Threads/Nombre_Thread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplos/Threads/Nombre_Thread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Panaderia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Panaderia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -41,9 +43,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Ejemplo_AgendarTareaTimer.executor": "Run",
+    "Application.Ejemplo_AgendarTareaTimerPERIODO.executor": "Run",
     "Application.Ejemplo_EXTEDER_Thread.executor": "Run",
     "Application.Ejemplo_InterfaceRunnable.executor": "Run",
     "Application.Ejemplo_InterfaceRunnable_Funcional.executor": "Run",
+    "Application.Ejemplo_ProductorConsumidor.executor": "Run",
+    "Application.Ejemplo_ProductorConsumidor_JAVA8.executor": "Run",
     "Application.Ejemplo_SINCRONIZACION_Thread.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -55,6 +61,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.CCristian.HILOS.Ejemplo_TIMER" />
+      <recent name="org.CCristian.HILOS.EjemplosSYNC" />
       <recent name="org.CCristian.HILOS.Ejemplos" />
     </key>
   </component>
@@ -74,6 +82,19 @@
       <option name="presentableId" value="Default" />
       <updated>1706535473328</updated>
     </task>
+    <task id="LOCAL-00001" summary="Ejemplo_SINCRONIZACION_Thread se creó la 1ra clase">
+      <option name="closed" value="true" />
+      <created>1706627134888</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706627134888</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ejemplo_SINCRONIZACION_Thread se creó la 1ra clase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejemplo_SINCRONIZACION_Thread se creó la 1ra clase" />
   </component>
 </project>

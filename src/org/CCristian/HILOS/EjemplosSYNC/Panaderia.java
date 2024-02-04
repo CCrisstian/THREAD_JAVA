@@ -8,8 +8,7 @@ public class Panaderia {
 
 
 /*----------------------------MÉTODO----------------------------*/
-    public synchronized void Hornear(String masa){
-
+    public synchronized void Hornear(String masa){ /*Método para el PANADERO*/
         while (disponible){ /*Pone en espera al panadero hasta que el consumidor coma el pan */
             try {
                 wait();
@@ -24,7 +23,7 @@ public class Panaderia {
         notify();
     }
 
-    public synchronized String Consumir(){
+    public synchronized String Consumir(){ /*Método para el CONSUMIDOR*/
         while (!disponible){
             try {
                 wait();
