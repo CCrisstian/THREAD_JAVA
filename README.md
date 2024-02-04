@@ -21,61 +21,47 @@
 
 <h2  align="center">Métodos de la clase Thread</h2>
 
-<p><b>start():</b></p>
+- start():
+Inicia la ejecución del hilo. Cuando se llama a este método, se invoca internamente el método run() que contiene el código a ejecutar en el hilo.
 
--  Inicia la ejecución del hilo. Cuando se llama a este método, se invoca internamente el método run() que contiene el código a ejecutar en el hilo.
+-  run():
+Este método contiene el código que se ejecutará en el hilo. Debe ser sobrescrito por la clase que extiende Thread o implementa Runnable.
 
-<p><b>run():</b></p>
+-  sleep(long millis):
+Hace que el hilo actual se suspenda durante el tiempo especificado en milisegundos. Puede lanzar una excepción InterruptedException.
 
--  Este método contiene el código que se ejecutará en el hilo. Debe ser sobrescrito por la clase que extiende Thread o implementa Runnable.
+-  join():
+Hace que el hilo que llama espere hasta que el hilo en el que se llama haya terminado su ejecución.
 
-<p><b>sleep(long millis):</b></p>
+-  isAlive():
+Retorna true si el hilo está vivo (ha sido iniciado pero no ha terminado aún), y false en caso contrario.
 
-- Hace que el hilo actual se suspenda durante el tiempo especificado en milisegundos. Puede lanzar una excepción InterruptedException.
+-  getId():
+Retorna el identificador único del hilo.
 
-<p><b>join():</b></p>
+-  setName(String name):
+Establece el nombre del hilo.
 
-- Hace que el hilo que llama espere hasta que el hilo en el que se llama haya terminado su ejecución.
+-  getName():
+ Retorrna el nombre del hilo.
 
-<p><b>isAlive():</b></p>
+-  currentThread():
+Retorna la referencia al objeto Thread que representa el hilo en el que se está ejecutando el método.
 
-- Retorna true si el hilo está vivo (ha sido iniciado pero no ha terminado aún), y false en caso contrario.
+-  yield():
+Indica al sistema que el hilo actual está dispuesto a ceder su tiempo de ejecución. Es una sugerencia al planificador de hilos, no una garantía.
 
-<p><b>getId():</b></p>
+-  interrupt():
+Interrumpe el hilo. Puede lanzar una excepción InterruptedException en el hilo si este estaba en un estado de espera o durmiendo.
 
-- Retorna el identificador único del hilo.
+-  isInterrupted():
+Retorna true si el hilo ha sido interrumpido, y false si no.
 
-<p><b>setName(String name):</b></p>
+-  setPriority(int priority):
+Establece la prioridad del hilo. Los valores válidos van desde Thread.MIN_PRIORITY hasta Thread.MAX_PRIORITY.
 
-- Establece el nombre del hilo.
-
-<p><b>getName():</b></p>
-
-- Retorna el nombre del hilo.
-
-<p><b>currentThread():</b></p>
-
-- Retorna la referencia al objeto Thread que representa el hilo en el que se está ejecutando el método.
-
-<p><b>yield():<p><b>
-
-- Indica al sistema que el hilo actual está dispuesto a ceder su tiempo de ejecución. Es una sugerencia al planificador de hilos, no una garantía.
-
-<p><b>interrupt():</b></p>
-
-- Interrumpe el hilo. Puede lanzar una excepción InterruptedException en el hilo si este estaba en un estado de espera o durmiendo.
-
-<p><b>isInterrupted():</b></p>
-
-- Retorna true si el hilo ha sido interrumpido, y false si no.
-
-<p><b>setPriority(int priority):</b></p>
-
-- Establece la prioridad del hilo. Los valores válidos van desde Thread.MIN_PRIORITY hasta Thread.MAX_PRIORITY.
-
-<p><b>getPriority():</b></p>
-
-- Retorna la prioridad del hilo.
+-  getPriority():
+Retorna la prioridad del hilo.
 
 <h2 align="center">Runneable</h2>
 <p>La interfaz <b>'Runnable'</b> en Java es una interfaz funcional que proporciona una forma de definir tareas que pueden ser ejecutadas por un hilo. Esta interfaz se utiliza comúnmente al trabajar con hilos en lugar de extender la clase <b>'Thread'</b>. La ventaja de usar <b>'Runnable'</b> es que puedes separar la lógica de la tarea de la lógica de ejecución del hilo, lo que facilita la reutilización del código.</p>
