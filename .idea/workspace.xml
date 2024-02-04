@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c48b3ec-22e2-4401-9b30-e9b6b5fcd399" name="Changes" comment="Ejemplo_SINCRONIZACION_Thread se creó la 1ra clase">
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_TIMER/Ejemplo_AgendarTareaTimer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_TIMER/Ejemplo_AgendarTareaTimerPERIODO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Ejemplo_ProductorConsumidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Ejemplo_ProductorConsumidor_JAVA8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Runnable/Consumidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Runnable/Panadero.java" afterDir="false" />
+    <list default="true" id="3c48b3ec-22e2-4401-9b30-e9b6b5fcd399" name="Changes" comment="Nuevas clases y métodos (Synchronized - Timer - TimerTask)">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_EXECUTOR/Ejemplo_EXECUTOR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_EXECUTOR/Ejemplo_EXECUTOR_Future.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_EXECUTOR/Ejemplo_EXECUTOR_Future_2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Panaderia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/EjemplosSYNC/Panaderia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +43,9 @@
   "keyToString": {
     "Application.Ejemplo_AgendarTareaTimer.executor": "Run",
     "Application.Ejemplo_AgendarTareaTimerPERIODO.executor": "Run",
+    "Application.Ejemplo_EXECUTOR.executor": "Run",
+    "Application.Ejemplo_EXECUTOR_Future.executor": "Run",
+    "Application.Ejemplo_EXECUTOR_Future_2.executor": "Run",
     "Application.Ejemplo_EXTEDER_Thread.executor": "Run",
     "Application.Ejemplo_InterfaceRunnable.executor": "Run",
     "Application.Ejemplo_InterfaceRunnable_Funcional.executor": "Run",
@@ -54,6 +55,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true"
@@ -61,6 +63,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.CCristian.HILOS.Ejemplo_EXECUTOR" />
       <recent name="org.CCristian.HILOS.Ejemplo_TIMER" />
       <recent name="org.CCristian.HILOS.EjemplosSYNC" />
       <recent name="org.CCristian.HILOS.Ejemplos" />
@@ -90,11 +93,20 @@
       <option name="project" value="LOCAL" />
       <updated>1706627134888</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Nuevas clases y métodos (Synchronized - Timer - TimerTask)">
+      <option name="closed" value="true" />
+      <created>1707006254417</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707006254417</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ejemplo_SINCRONIZACION_Thread se creó la 1ra clase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ejemplo_SINCRONIZACION_Thread se creó la 1ra clase" />
+    <MESSAGE value="Nuevas clases y métodos (Synchronized - Timer - TimerTask)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nuevas clases y métodos (Synchronized - Timer - TimerTask)" />
   </component>
 </project>
