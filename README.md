@@ -140,14 +140,48 @@
 <p>La clase abstracta TimerTask implementa la interfaz <b>'Runnable'</b> y se utiliza para representar una tarea programada que puede ser ejecutada por un <b>'Timer'</b></p>
 <h3>Observaciones Importantes:</h3>
 
--  1 Programación Única o Periódica:
+-  Programación Única o Periódica:
 <p>Puedes usar <b>'schedule()'</b> para programar una tarea única o <b>'scheduleAtFixedRate()'</b> para programar una tarea periódica.</p>
 
--  2 Tiempos Relativos o Absolutos:
+-  Tiempos Relativos o Absolutos:
 <p>Puedes especificar tiempos relativos (por ejemplo, 2000 milisegundos después de ahora) o tiempos absolutos (un instante de tiempo específico) para la ejecución de la tarea.</p>
 
--  3 Gestión de Excepciones:
+-  Gestión de Excepciones:
 <p>Es importante manejar las excepciones, ya que las tareas programadas pueden lanzar excepciones que deben ser capturadas y manejadas adecuadamente.</p>
 
--  4 Consideraciones de Concurrencia:
+-  Consideraciones de Concurrencia:
 <p>Ambas clases <b>('Timer' y 'TimerTask')</b> no están diseñadas para ser utilizadas en entornos concurrentes avanzados, como en aplicaciones con hilos concurrentes. En tales casos, se recomienda utilizar alternativas más modernas como <b>'ScheduledExecutorService'</b> del paquete <b>'java.util.concurrent'</b>.
+
+<h1 align="center">Freamework "Executor"</h1>
+<p>En JAVA, el framework "Executor" es una interfaz que proporciona una capa de abstracción para la ejecución de tareas en hilos. El propósito principal de Executor es proporcionar una forma más flexible y eficiente de administrar la ejecución de hilos en comparación con crear y gestionar hilos directamente.</p>
+<p>La interfaz "Executor" se encuentra en el paquete "java.util.concurrent" y define un único método llamado "execute(Runnable command)". Las implementaciones de Executor pueden variar en la forma en que gestionan y ejecutan las tareas, pero todas ellas deben proporcionar algún mecanismo para ejecutar objetos que implementan la interfaz "Runnable".</p>
+<h3>Implementaciones Comunes:</h3>
+<p>Java proporciona varias implementaciones de Executor en el paquete "java.util.concurrent":</p>
+
+-  Executors.newSingleThreadExecutor():
+Crea un Executor con un solo hilo.
+
+-  Executors.newFixedThreadPool(int nThreads):
+Crea un Executor con un número fijo de hilos.
+
+- Executors.newCachedThreadPool():
+Crea un Executor que ajusta automáticamente el número de hilos según la carga de trabajo.
+
+- Executors.newScheduledThreadPool(int corePoolSize):
+Crea un ScheduledExecutorService que puede programar tareas periódicas.
+
+<h3>Ventajas del Framework Executor:</h3>
+
+-  Abstracción de Hilos:
+Permite abstraerse de la creación y gestión directa de hilos, lo que facilita la implementación y mantenimiento del código concurrente.
+
+- Reutilización de Hilos:
+Los Executor pueden reutilizar hilos existentes en lugar de crear nuevos, lo que ayuda a reducir el costo de la creación de hilos.
+
+-  Control de Recursos:
+Proporciona control sobre la cantidad de hilos utilizados y su gestión, evitando la creación excesiva de hilos que puede afectar el rendimiento.
+
+-  Facilita la Programación Concurrente:
+Mejora la legibilidad del código y facilita la programación concurrente al proporcionar un modelo más alto de abstracción que el manejo directo de hilos.
+
+<p>En resumen, el framework "Executor" es una herramienta poderosa para gestionar la ejecución de tareas en hilos en Java, proporcionando abstracción, reutilización de hilos y control sobre los recursos utilizados. Se recomienda su uso en lugar de gestionar hilos directamente en muchos casos.</p>
