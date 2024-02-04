@@ -217,3 +217,44 @@ Entre otros.
   - Agrega funcionalidades adicionales para gestionar tareas de manera más avanzada, como la obtención de resultados futuros, programación de tareas periódicas y gestión del ciclo de vida del servicio.
 
 <p>En resumen, "Executor" es la interfaz básica, "Executors" es una clase de utilidad para crear instancias de ExecutorService, y "ExecutorService" es una interfaz más rica que extiende Executor y proporciona funcionalidades adicionales para la administración avanzada de tareas concurrentes.</p>
+
+<h2 align="center">ScheduledExecutorService</h2>
+<p>"ScheduledExecutorService" es una interfaz en Java que extiende "ExecutorService" y agrega funcionalidades para programar tareas para su ejecución periódica o con retraso en el tiempo. Esta interfaz se encuentra en el paquete "java.util.concurrent"</p>
+<h3>Características Principales:</h3>
+
+- Programación de Tareas Periódicas:
+  - 'ScheduledExecutorService' permite programar tareas para que se ejecuten periódicamente con una frecuencia fija.
+
+- Programación de Tareas con Retraso:
+  - Puedes programar tareas para que se ejecuten con un cierto retraso después de la programación inicial.
+
+- Facilita la Programación Asíncrona:
+  - Ofrece una forma eficiente de programar tareas asíncronas sin depender de hilos adicionales.
+
+ <h3>Métodos Comunes:</h3>
+ <p>Algunos de los métodos más comunes proporcionados por "ScheduledExecutorService" incluyen:</p>
+
+- schedule(Runnable command, long delay, TimeUnit unit):
+  - Programa una tarea para ejecutarse después de un cierto retraso.
+
+- schedule(Callable<V> callable, long delay, TimeUnit unit):
+  - Similar a schedule(Runnable), pero para tareas que devuelven un resultado.
+
+- scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit):
+  - Programa una tarea para ejecutarse periódicamente con un intervalo fijo entre ejecuciones.
+
+- scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit unit):
+  - Programa una tarea para ejecutarse periódicamente con un retraso fijo entre el final de una ejecución y el inicio de la siguiente.
+ 
+ <h3>Consideraciones Importantes:</h3>
+
+- shutdown():
+  - Es importante llamar a shutdown() en el ScheduledExecutorService después de su uso para liberar recursos.
+
+- Manejo de Excepciones:
+  - Deberías manejar excepciones dentro de las tareas programadas, ya que las excepciones no capturadas podrían detener futuras ejecuciones.
+
+- Control de Sincronización:
+  - Aunque ScheduledExecutorService maneja la programación de tareas de manera eficiente, debes ser consciente de posibles problemas de concurrencia al compartir datos entre tareas programadas.
+
+<p>En resumen, "ScheduledExecutorService" es una herramienta útil para programar tareas para su ejecución periódica o con retraso en el tiempo de manera eficiente en entornos concurrentes.</p>
