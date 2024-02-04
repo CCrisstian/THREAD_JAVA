@@ -21,61 +21,47 @@
 
 <h2  align="center">Métodos de la clase Thread</h2>
 
-<p><b>start():</b></p>
+- start():
+Inicia la ejecución del hilo. Cuando se llama a este método, se invoca internamente el método run() que contiene el código a ejecutar en el hilo.
 
--  Inicia la ejecución del hilo. Cuando se llama a este método, se invoca internamente el método run() que contiene el código a ejecutar en el hilo.
+-  run():
+Este método contiene el código que se ejecutará en el hilo. Debe ser sobrescrito por la clase que extiende Thread o implementa Runnable.
 
-<p><b>run():</b></p>
+-  sleep(long millis):
+Hace que el hilo actual se suspenda durante el tiempo especificado en milisegundos. Puede lanzar una excepción InterruptedException.
 
--  Este método contiene el código que se ejecutará en el hilo. Debe ser sobrescrito por la clase que extiende Thread o implementa Runnable.
+-  join():
+Hace que el hilo que llama espere hasta que el hilo en el que se llama haya terminado su ejecución.
 
-<p><b>sleep(long millis):</b></p>
+-  isAlive():
+Retorna true si el hilo está vivo (ha sido iniciado pero no ha terminado aún), y false en caso contrario.
 
-- Hace que el hilo actual se suspenda durante el tiempo especificado en milisegundos. Puede lanzar una excepción InterruptedException.
+-  getId():
+Retorna el identificador único del hilo.
 
-<p><b>join():</b></p>
+-  setName(String name):
+Establece el nombre del hilo.
 
-- Hace que el hilo que llama espere hasta que el hilo en el que se llama haya terminado su ejecución.
+-  getName():
+ Retorrna el nombre del hilo.
 
-<p><b>isAlive():</b></p>
+-  currentThread():
+Retorna la referencia al objeto Thread que representa el hilo en el que se está ejecutando el método.
 
-- Retorna true si el hilo está vivo (ha sido iniciado pero no ha terminado aún), y false en caso contrario.
+-  yield():
+Indica al sistema que el hilo actual está dispuesto a ceder su tiempo de ejecución. Es una sugerencia al planificador de hilos, no una garantía.
 
-<p><b>getId():</b></p>
+-  interrupt():
+Interrumpe el hilo. Puede lanzar una excepción InterruptedException en el hilo si este estaba en un estado de espera o durmiendo.
 
-- Retorna el identificador único del hilo.
+-  isInterrupted():
+Retorna true si el hilo ha sido interrumpido, y false si no.
 
-<p><b>setName(String name):</b></p>
+-  setPriority(int priority):
+Establece la prioridad del hilo. Los valores válidos van desde Thread.MIN_PRIORITY hasta Thread.MAX_PRIORITY.
 
-- Establece el nombre del hilo.
-
-<p><b>getName():</b></p>
-
-- Retorna el nombre del hilo.
-
-<p><b>currentThread():</b></p>
-
-- Retorna la referencia al objeto Thread que representa el hilo en el que se está ejecutando el método.
-
-<p><b>yield():<p><b>
-
-- Indica al sistema que el hilo actual está dispuesto a ceder su tiempo de ejecución. Es una sugerencia al planificador de hilos, no una garantía.
-
-<p><b>interrupt():</b></p>
-
-- Interrumpe el hilo. Puede lanzar una excepción InterruptedException en el hilo si este estaba en un estado de espera o durmiendo.
-
-<p><b>isInterrupted():</b></p>
-
-- Retorna true si el hilo ha sido interrumpido, y false si no.
-
-<p><b>setPriority(int priority):</b></p>
-
-- Establece la prioridad del hilo. Los valores válidos van desde Thread.MIN_PRIORITY hasta Thread.MAX_PRIORITY.
-
-<p><b>getPriority():</b></p>
-
-- Retorna la prioridad del hilo.
+-  getPriority():
+Retorna la prioridad del hilo.
 
 <h2 align="center">Runneable</h2>
 <p>La interfaz <b>'Runnable'</b> en Java es una interfaz funcional que proporciona una forma de definir tareas que pueden ser ejecutadas por un hilo. Esta interfaz se utiliza comúnmente al trabajar con hilos en lugar de extender la clase <b>'Thread'</b>. La ventaja de usar <b>'Runnable'</b> es que puedes separar la lógica de la tarea de la lógica de ejecución del hilo, lo que facilita la reutilización del código.</p>
@@ -128,3 +114,60 @@
 - Excepción InterruptedException: wait() puede lanzar InterruptedException, por lo que es necesario manejar esta excepción.
 
 <p>La combinación de <b>'wait()'</b>, <b>'notify()'</b>, y <b>'notifyAll()'</b> es fundamental para la implementación de patrones de comunicación entre hilos en Java. Estos métodos proporcionan una forma segura de sincronizar y coordinar la ejecución de hilos en situaciones donde se comparten recursos.</p>
+
+<h2 align="center"> "Timer" y "TimerTask"</h2>
+
+<p>En JAVA, las clases <b>'Timer'</b> y <b>'TimerTask'</b> se utilizan para programar tareas para ejecutarse en el futuro de manera programada o periódica. Estas clases forman parte del paquete <b>'java.util'</b>.</p>
+
+<h3>Timer</h3>
+<p>La clase <b>'Timer'</b> se utiliza para programar tareas para ejecutarse en el futuro, ya sea de forma única o periódica. Permite la programación de tareas en un hilo de fondo.</p>
+
+<h3>TimerTask</h3>
+<p>La clase abstracta TimerTask implementa la interfaz <b>'Runnable'</b> y se utiliza para representar una tarea programada que puede ser ejecutada por un <b>'Timer'</b></p>
+<h3>Observaciones Importantes:</h3>
+
+-  Programación Única o Periódica:
+<p>Puedes usar <b>'schedule()'</b> para programar una tarea única o <b>'scheduleAtFixedRate()'</b> para programar una tarea periódica.</p>
+
+-  Tiempos Relativos o Absolutos:
+<p>Puedes especificar tiempos relativos (por ejemplo, 2000 milisegundos después de ahora) o tiempos absolutos (un instante de tiempo específico) para la ejecución de la tarea.</p>
+
+-  Gestión de Excepciones:
+<p>Es importante manejar las excepciones, ya que las tareas programadas pueden lanzar excepciones que deben ser capturadas y manejadas adecuadamente.</p>
+
+-  Consideraciones de Concurrencia:
+<p>Ambas clases <b>('Timer' y 'TimerTask')</b> no están diseñadas para ser utilizadas en entornos concurrentes avanzados, como en aplicaciones con hilos concurrentes. En tales casos, se recomienda utilizar alternativas más modernas como <b>'ScheduledExecutorService'</b> del paquete <b>'java.util.concurrent'</b>.
+
+<h1 align="center">Freamework "Executor"</h1>
+<p>En JAVA, el framework "Executor" es una interfaz que proporciona una capa de abstracción para la ejecución de tareas en hilos. El propósito principal de Executor es proporcionar una forma más flexible y eficiente de administrar la ejecución de hilos en comparación con crear y gestionar hilos directamente.</p>
+<p>La interfaz "Executor" se encuentra en el paquete "java.util.concurrent" y define un único método llamado "execute(Runnable command)". Las implementaciones de Executor pueden variar en la forma en que gestionan y ejecutan las tareas, pero todas ellas deben proporcionar algún mecanismo para ejecutar objetos que implementan la interfaz "Runnable".</p>
+<h3>Implementaciones Comunes:</h3>
+<p>Java proporciona varias implementaciones de Executor en el paquete "java.util.concurrent":</p>
+
+-  Executors.newSingleThreadExecutor():
+Crea un Executor con un solo hilo.
+
+-  Executors.newFixedThreadPool(int nThreads):
+Crea un Executor con un número fijo de hilos.
+
+- Executors.newCachedThreadPool():
+Crea un Executor que ajusta automáticamente el número de hilos según la carga de trabajo.
+
+- Executors.newScheduledThreadPool(int corePoolSize):
+Crea un ScheduledExecutorService que puede programar tareas periódicas.
+
+<h3>Ventajas del Framework Executor:</h3>
+
+-  Abstracción de Hilos:
+Permite abstraerse de la creación y gestión directa de hilos, lo que facilita la implementación y mantenimiento del código concurrente.
+
+- Reutilización de Hilos:
+Los Executor pueden reutilizar hilos existentes en lugar de crear nuevos, lo que ayuda a reducir el costo de la creación de hilos.
+
+-  Control de Recursos:
+Proporciona control sobre la cantidad de hilos utilizados y su gestión, evitando la creación excesiva de hilos que puede afectar el rendimiento.
+
+-  Facilita la Programación Concurrente:
+Mejora la legibilidad del código y facilita la programación concurrente al proporcionar un modelo más alto de abstracción que el manejo directo de hilos.
+
+<p>En resumen, el framework "Executor" es una herramienta poderosa para gestionar la ejecución de tareas en hilos en Java, proporcionando abstracción, reutilización de hilos y control sobre los recursos utilizados. Se recomienda su uso en lugar de gestionar hilos directamente en muchos casos.</p>
