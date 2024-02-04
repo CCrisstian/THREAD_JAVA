@@ -171,3 +171,49 @@ Proporciona control sobre la cantidad de hilos utilizados y su gestión, evitand
 Mejora la legibilidad del código y facilita la programación concurrente al proporcionar un modelo más alto de abstracción que el manejo directo de hilos.
 
 <p>En resumen, el framework "Executor" es una herramienta poderosa para gestionar la ejecución de tareas en hilos en Java, proporcionando abstracción, reutilización de hilos y control sobre los recursos utilizados. Se recomienda su uso en lugar de gestionar hilos directamente en muchos casos.</p>
+
+<h2 align="center">Executor, Executors y ExecutorService</h2>
+<p>"Executor", "Executors" y "ExecutorService" son componentes relacionados en el framework de concurrencia de Java, y cada uno tiene su propio propósito en la administración de tareas concurrentes.</p>
+
+<h3>Executor:</h3>
+
+- Propósito: 
+La interfaz Executor es la interfaz fundamental que define un único método execute(Runnable command) para ejecutar una tarea.
+
+- Uso Básico:
+Puedes crear implementaciones de Executor para ejecutar tareas de manera asíncrona. Es una interfaz bastante básica que no proporciona métodos adicionales para controlar el estado de la ejecución o gestionar el ciclo de vida de los hilos.
+
+<h3>Executors:</h3>
+
+- Propósito:
+La clase Executors proporciona fábricas y utilidades para crear diferentes tipos de ExecutorService, que es una interfaz más avanzada que Executor.
+
+- Uso Básico: 
+Executors ofrece métodos estáticos para crear instancias preconfiguradas de ExecutorService, como un ExecutorService de un solo hilo, un ExecutorService de piscina fija, un ExecutorService de piscina variable y otros.
+
+<h3>ExecutorService:</h3>
+
+- Propósito: 
+La interfaz ExecutorService extiende la interfaz Executor y agrega funcionalidades adicionales para gestionar tareas de manera más avanzada, como obtener resultados futuros, programar tareas periódicas y gestionar el ciclo de vida del servicio.
+
+- Métodos Adicionales: 
+Algunos de los métodos adicionales proporcionados por ExecutorService incluyen:
+  - submit()
+  - invokeAll()
+  - invokeAny()
+  - shutdown()
+  - awaitTermination()
+Entre otros.
+
+<h3>Diferencias y Resumen:</h3>
+
+- <b>"Executor" es una interfaz simple que solo define el método 'execute()'.</b>
+  - Utilizado para ejecutar tareas de manera asíncrona.
+
+- <b>"Executors" es una clase de utilidad que proporciona fábricas para crear instancias de 'ExecutorService'.</b>
+  - Ofrece métodos estáticos para crear instancias preconfiguradas de ExecutorService con diferentes características.
+
+- <b>"ExecutorService" es una interfaz más avanzada que extiende 'Executor'.</b>
+  - Agrega funcionalidades adicionales para gestionar tareas de manera más avanzada, como la obtención de resultados futuros, programación de tareas periódicas y gestión del ciclo de vida del servicio.
+
+<p>En resumen, "Executor" es la interfaz básica, "Executors" es una clase de utilidad para crear instancias de ExecutorService, y "ExecutorService" es una interfaz más rica que extiende Executor y proporciona funcionalidades adicionales para la administración avanzada de tareas concurrentes.</p>
