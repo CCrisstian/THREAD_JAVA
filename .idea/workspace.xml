@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c48b3ec-22e2-4401-9b30-e9b6b5fcd399" name="Changes" comment="Nuevas clases y métodos (Synchronized - Timer - TimerTask)">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_EXECUTOR/Ejemplo_EXECUTOR.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_EXECUTOR/Ejemplo_EXECUTOR_Future.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_EXECUTOR/Ejemplo_EXECUTOR_Future_2.java" afterDir="false" />
+    <list default="true" id="3c48b3ec-22e2-4401-9b30-e9b6b5fcd399" name="Changes" comment="Primeros ejemplos del Framework Executor">
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_EXECUTOR/Ejemplo_EXECUTOR_ProductorConsumidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_EXECUTOR/Ejemplo_SCHEDULEDExecutorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_EXECUTOR/Ejemplo_SCHEDULEDExecutorService_Periodo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_EXECUTOR/Ejemplo_EXECUTOR_Future_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/CCristian/HILOS/Ejemplo_EXECUTOR/Ejemplo_EXECUTOR_Future_2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +46,14 @@
     "Application.Ejemplo_EXECUTOR.executor": "Run",
     "Application.Ejemplo_EXECUTOR_Future.executor": "Run",
     "Application.Ejemplo_EXECUTOR_Future_2.executor": "Run",
+    "Application.Ejemplo_EXECUTOR_ProductorConsumidor.executor": "Run",
     "Application.Ejemplo_EXTEDER_Thread.executor": "Run",
     "Application.Ejemplo_InterfaceRunnable.executor": "Run",
     "Application.Ejemplo_InterfaceRunnable_Funcional.executor": "Run",
     "Application.Ejemplo_ProductorConsumidor.executor": "Run",
     "Application.Ejemplo_ProductorConsumidor_JAVA8.executor": "Run",
+    "Application.Ejemplo_SCHEDULEDExecutorService.executor": "Run",
+    "Application.Ejemplo_SCHEDULEDExecutorService_Periodo.executor": "Run",
     "Application.Ejemplo_SINCRONIZACION_Thread.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -101,12 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707006254417</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Primeros ejemplos del Framework Executor">
+      <option name="closed" value="true" />
+      <created>1707059002966</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707059002966</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ejemplo_SINCRONIZACION_Thread se creó la 1ra clase" />
     <MESSAGE value="Nuevas clases y métodos (Synchronized - Timer - TimerTask)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nuevas clases y métodos (Synchronized - Timer - TimerTask)" />
+    <MESSAGE value="Primeros ejemplos del Framework Executor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primeros ejemplos del Framework Executor" />
   </component>
 </project>

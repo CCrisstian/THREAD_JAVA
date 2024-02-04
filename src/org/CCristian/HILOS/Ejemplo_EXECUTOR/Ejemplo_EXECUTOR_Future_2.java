@@ -5,10 +5,16 @@ import java.util.concurrent.*;
 public class Ejemplo_EXECUTOR_Future_2 {
     public static void main(String[] args) throws InterruptedException, ExecutionException, TimeoutException {
 
-        ExecutorService executor = Executors.newFixedThreadPool(3);
+        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(3);
         /*newSingleThreadExecutor() -> crea 1 hilo. Ejecuta una tarea a la vez, ejecución SECUENCIAL*/
         /*newFixedThreadPool(X cantidad) -> crea X hilos. Ejecuta las tareas asignadas todas a al mismo tiempo, ejecución PARALELO*/
         /*newFixedThreadPool(X cantidad) -> crea X hilos. No asegura la prioridad de ejecución*/
+
+        System.out.println("----------------------------------------------------");
+        System.out.println("Tamaño del pool: " + executor.getPoolSize());
+        System.out.println("Cantidad de tareas en cola: " + executor.getQueue().size());
+        System.out.println("----------------------------------------------------\n");
+
 
         Callable<String> tarea = () -> {
         /*Callable<Cualquier tipo de dato que queramos devolver>*/
@@ -40,6 +46,11 @@ public class Ejemplo_EXECUTOR_Future_2 {
         /*Future< > acepta variables del tipo "Runnable" y "Callable"*/
         /*Como tarea es del tipo Callable devuelve un valor, en consecuencia, va Future<String>*/
         /*Como tarea2 es del tipo Callable devuelve un valor, en consecuencia, va Future<Integer>*/
+
+        System.out.println("----------------------------------------------------");
+        System.out.println("Tamaño del pool: " + executor.getPoolSize());
+        System.out.println("Cantidad de tareas en cola: " + executor.getQueue().size());
+        System.out.println("----------------------------------------------------\n");
 
         executor.shutdown();    /*Finaliza el executor una vez que todas las tareas que realiza se completan*/
 
